@@ -8,10 +8,9 @@ export default function SignUpPage() {
         <>
             <div className='flex items-center justify-center mt-10'>
                 <SignUp
-                appearance={{
-                    baseTheme: dark
-                }}
-                
+                    appearance={{
+                        baseTheme: dark
+                    }}
                 />
             </div>
         </>
