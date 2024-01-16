@@ -3,11 +3,8 @@ import React from 'react'
 
 export default function SignInPage() {
     return (
-        <>
-            <div className='flex items-center justify-center mt-10'>
+            <div className='flex items-center justify-center bg-indigo-950 relative h-screen'>
                 <SignIn />
-            </div>
-
-        </>
+            </div> 
     )
 }

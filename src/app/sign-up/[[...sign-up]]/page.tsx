@@ -5,14 +5,8 @@ import { deDE } from "@clerk/localizations";
 
 export default function SignUpPage() {
     return (
-        <>
-            <div className='flex items-center justify-center mt-10'>
-                <SignUp
-                    appearance={{
-                        baseTheme: dark
-                    }}
-                />
+            <div className='flex items-center justify-center bg-indigo-950 relative h-screen'>
+                <SignUp />
             </div>
-        </>
     )
 }

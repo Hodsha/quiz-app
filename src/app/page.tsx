@@ -1,53 +1,24 @@
+import Link from "next/link";
 import img from "./../../public/quiz.jpg";
 
 export default function Home() {
   return (
-    <div className="relative h-full overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center sm:bg-right md:bg-right lg:bg-left xl:bg-center"
-        style={{
-          backgroundImage: 'url("/quiz.jpg")',
-          height: '100%',
-          width: '100%',
-          position: 'absolute',
-          backgroundSize: 'cover',
-          backgroundPosition: 'left',
-          backgroundPositionY: '-50px', // Beispiel: Bild um 50 Pixel nach oben verschieben
-        }}
-      >
-        <h1></h1>
-        </div>
-      <div className="sm:hidden">
-   
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("/quiz-small.jpg")',
-            height: '100%',
-            width: '100%',
-            position: 'absolute',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundPositionY: '-50px',
-          }}
-        >
-          <h1>was geht ab</h1>
-        </div>
+    <div className="bg-indigo-950 relative h-screen">
+      <div className="flex items-center justify-center">
+        <h1 className="text-white text-9xl">QUIZ APP</h1>
       </div>
-      <div className="hidden sm:block md:hidden">
-        {/* Dieser Abschnitt wird bei Bildschirmen größer als `sm` und kleiner als `md` angezeigt */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("/quiz-medium.jpg")',
-            height: '100%',
-            width: '100%',
-            position: 'absolute',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundPositionY: '-50px',
-          }}
-        />
+      <div className="flex items-center justify-center">
+        <h3 className="text-white">made by Shayan</h3>
+      </div>
+      <div className=" flex items-center justify-center h-4/6">
+        <div className="flex space-x-4">
+          <button className="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-900">
+            <Link href='sign-in'> Sign In</Link>
+          </button>
+          <button className="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-900">
+            <Link href='sign-up'> Sign Up</Link>
+          </button>
+        </div>
       </div>
     </div>
   )
