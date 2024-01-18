@@ -12,6 +12,7 @@
     "@clerk/localizations": "^1.26.13",
     "@clerk/nextjs": "^4.29.3",
     "@clerk/themes": "^1.7.9",
+    "@supabase/supabase-js": "^2.39.3",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
