@@ -20,7 +20,6 @@ export default function DashboardPage() {
           <SignOutButton />
         </button>
       </div>
-    </div>
-
+    </div>   
   )
 }

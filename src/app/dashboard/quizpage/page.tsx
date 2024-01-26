@@ -7,56 +7,51 @@ import { resolve } from 'path';
 import React from 'react'
 import { useEffect, useState } from 'react';
 
+
+
+
 export default function quizPage() {
-  const [fetchError, setFetchError] = useState<any>(null);
-  const [UserPoints, setUserPoints] = useState<any>(null);
-
-  console.log(supabase);
-  useEffect(() => {
-    const fetchUserPoints = async () => {
-      const { data, error }: any = await supabase
-        .from('smooties')
-        .select()
-
-      if (error) {
-        setFetchError('Could not fetch the Data');
-        setUserPoints(null);
-        console.log(error);
-      }
-
-      if (data) {
-        setUserPoints(data);
-        setFetchError(null);
-      }
-
-      if (Array.isArray(data)) {
-        setUserPoints(data);
-        setFetchError(null);
-      } else {
-        console.log('Data is not an array:', data);
-      }
-
-    }
-
-    fetchUserPoints();
-  }, []);
-
   return (
     <div>
-      <Link href="/quizpage">
-        <div className="text-lg-uppercase font-bold text-black">
-          es wird weitergeführt
+      <div className="bg-indigo-950 flex items-center justify-center h-screen">
+        <div className="flex flex-col items-center space-y-4 flex-1">
+          <button className="bg-amber-500 text-white py-2 px-4 rounded hover:bg-amber-800 w-56">
+            <Link href="/dashboard/quizpage/knowledge">
+              <div className="text-lg-uppercase font-bold text-black">
+                Allgemeinwissen
+              </div>
+            </Link>
+          </button>
+          <button className="bg-amber-500 text-white py-2 px-4 rounded  hover:bg-amber-800 w-56">
+            <Link href="/dashboard/quizpage/history">
+              <div className="text-lg-uppercase font-bold text-black">
+                Media
+              </div>
+            </Link>
+          </button>
+          <button className="bg-amber-500 text-white py-2 px-4 rounded  hover:bg-amber-800 w-56">
+            <Link href="/dashboard/quizpage/sport">
+              <div className="text-lg-uppercase font-bold text-black">
+                Sport
+              </div>
+            </Link>
+          </button>
+          <button className="bg-amber-500 text-white py-2 px-4 rounded  hover:bg-amber-800 w-56">
+            <Link href="/dashboard/quizpage/history">
+              <div className="text-lg-uppercase font-bold text-black">
+                Geschichte
+              </div>
+            </Link>
+          </button>
+          <button className="bg-amber-500 text-white py-2 px-4 rounded  hover:bg-amber-800 w-56">
+            <Link href="/dashboard/quizpage/technology">
+              <div className="text-lg-uppercase font-bold text-black">
+                Technologie
+              </div>
+            </Link>
+          </button>
         </div>
-      </Link>
-
-      {UserPoints && (
-        
-          UserPoints.map((res: any) => {
-            { res.title }
-          })
-       
-      )}
-
+      </div>
     </div>
   )
 }
